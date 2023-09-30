@@ -52,3 +52,4 @@ plot(train_size_list, accuracy_list,
      xlab = "train size", ylab = "accuracy", lwd = 3)
 grid(nx = NULL, ny = NULL,
      lty = 2, col = "gray", lwd = 2)
+
