@@ -12,14 +12,14 @@ segragete <- function(n_row, train_size, data) {
 }
 
 
-x1<-c(rnorm(50,mean=10,sd=4),rnorm(50,mean=20,sd=3))
-x2<-c(rnorm(50,mean=14,sd=4),rnorm(50,mean=18,sd=3))
+x1 <- c(rnorm(50, mean = 10, sd = 4), rnorm(50, mean = 20, sd = 3))
+x2 <- c(rnorm(50, mean = 14, sd = 4), rnorm(50, mean = 18, sd = 3))
 
-data<-data.frame(X1=x1,X2=x2,Class=c(rep("-1",50),rep("1",50)))
-data$color[data$Class=="-1"]<-"blue"
-data$color[data$Class=="1"]<-"red"
+data <- data.frame(X1 = x1, X2 = x2, Class = c(rep("-1", 50), rep("1", 50)))
+data$color[data$Class == "-1"] <- "blue"
+data$color[data$Class == "1"] <- "red"
 
-plot(x1,x2,col=data$color,
+plot(x1, x2, col = data$color,
      xlab = "X1", ylab = "X2",
      pch = 20, cex = 2)
 
@@ -49,6 +49,6 @@ for (size in train_size_list) {
 
 plot(train_size_list, accuracy_list,
      type = "l", col = "red",
-     xlab="train size", ylab = "accuracy", lwd = 3)
+     xlab = "train size", ylab = "accuracy", lwd = 3)
 grid(nx = NULL, ny = NULL,
      lty = 2, col = "gray", lwd = 2)

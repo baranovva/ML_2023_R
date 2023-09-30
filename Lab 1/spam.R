@@ -39,6 +39,6 @@ for (size in train_size_list) {
 
 plot(train_size_list, accuracy_list,
      type = "l", col = "red",
-     xlab="train size", ylab = "accuracy", lwd = 3)
+     xlab = "train size", ylab = "accuracy", lwd = 3)
 grid(nx = NULL, ny = NULL,
      lty = 2, col = "gray", lwd = 2)
