@@ -24,7 +24,7 @@ for (size in train_size_list) {
   data_train <- data_prepared[[1]]
   data_test <- data_prepared[[2]]
 
-  KNN_classifier <- kknn(V10 ~ ., data_train,data_test,distance=1,kernel="triangular")
+  KNN_classifier <- kknn(V10 ~ ., data_train, data_test, distance = 1, kernel = "triangular")
   KNN_predicted <- fitted(KNN_classifier)
 
   result <- table(KNN_predicted, data_test$V10)
