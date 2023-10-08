@@ -15,5 +15,5 @@ result <- table(predicted, data_test$Survived)
 
 n_row_test <- dim(data_test)[1]
 # (TP + TN)/test_size
-accuracy <- (result[1] + result[4]) / n_row_test
-print(accuracy)
+accuraccy <- (result[1] + result[4]) / n_row_test
+print(accuraccy)
