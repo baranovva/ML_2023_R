@@ -12,7 +12,7 @@ segragete <- function(n_row, train_size, data) {
 }
 
 data <- read.table("Lab 3/svmdata3.txt", sep = "\t", stringsAsFactors = TRUE)
-
+1
 n_row <- dim(data)[1]
 size <- 0.5
 train_size <- as.integer(n_row * size)

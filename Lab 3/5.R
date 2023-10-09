@@ -4,7 +4,7 @@ data_train <- read.table("Lab 3/svmdata5.txt", sep = "\t", stringsAsFactors = TR
 data_test <- read.table("Lab 3/svmdata5test.txt", sep = "\t", stringsAsFactors = TRUE)
 
 # radial
-gamma_list <- seq(1, 101, 20)
+gamma_list <- seq(1, 101, 100)
 
 for (gamma in gamma_list) {
   model <- svm(Colors ~ ., data = data_train, type = "C-classification",
@@ -14,7 +14,7 @@ for (gamma in gamma_list) {
   accuracy <- (result[1] + result[4]) / sum(result)
   print(accuracy)
 
-  plot(model, data_train, grid = 1000, symbolPalette = c("Green", "Red"))
+  plot(model, data_train, grid = 500, symbolPalette = c("Green", "Red"))
 }
 
 # polynomial and sibmoid
