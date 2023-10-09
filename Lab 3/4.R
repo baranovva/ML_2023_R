@@ -1,7 +1,6 @@
 library(e1071)
 set.seed(12345)
 
-
 data_train <- read.table("Lab 3/svmdata4.txt", sep = "\t", stringsAsFactors = TRUE)
 data_test <- read.table("Lab 3/svmdata4test.txt", sep = "\t", stringsAsFactors = TRUE)
 
