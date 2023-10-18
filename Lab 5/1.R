@@ -1,11 +1,10 @@
 library(cluster)
 data(pluton)
 
-kmeans3 <- kmeans(pluton, centers = 3)
-silhouette(kmeans3$cluster, dist(pluton))
+set.seed(12345)
 
-kmeans3_10iter <- kmeans(pluton, centers = 3, max.iter = 10)
-silhouette(kmeans3_10iter$cluster, dist(pluton))
+for (i in seq(2, 16, 2)){
+  kmeans3_1iter <- kmeans(pluton, centers = 3, iter.max = i)
+  print(mean(silhouette(kmeans3_1iter$cluster, dist(pluton))[, 3]))
+}
 
-kmeans3_1iter <- kmeans(pluton, centers = 3, max.iter = 1)
-silhouette(kmeans3_1iter$cluster, dist(pluton))
